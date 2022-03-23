@@ -3,10 +3,40 @@ import ReactDOM from 'react-dom';
 
 import './index.css';
 
+const Square = () => {
+  return (
+    <div className='square'>
+      X
+    </div>
+  );
+};
+
+const Board = () => {
+  return (
+    <div style={{
+      backgroundColor: 'turquoise',
+      margin: 10,
+      padding: 20,
+    }}>
+      Board
+      <div className='board-row'>
+        <Square /><Square /><Square />
+      </div>
+      <div className='board-row'>
+        <Square /><Square /><Square />
+      </div>
+      <div className='board-row'>
+        <Square /><Square /><Square />
+      </div>
+    </div>
+  );
+};
+
 const Game = () => {
   return (
-    <div>
+    <div className='game'>
       Game
+      <Board />
     </div>
   );
 };
